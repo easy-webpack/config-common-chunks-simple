@@ -1,5 +1,5 @@
 import {WebpackConfig, get} from '@easy-webpack/core'
-import * as webpack from 'webpack'
+const webpack = require('webpack')
 
 /**
  * Plugin: CommonsChunkPlugin
