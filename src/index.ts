@@ -9,7 +9,7 @@ import * as webpack from 'webpack'
  * See: https://webpack.github.io/docs/list-of-plugins.html#commonschunkplugin
  * See: https://github.com/webpack/docs/wiki/optimization#multi-page-app
  */
-export = function commonChunksSimple({appChunkName = '', firstChunk = ''}) {
+export = function commonChunksSimple({appChunkName = '', firstChunk = ''} = {}) {
   return function commonChunksSimple(this: WebpackConfig): WebpackConfig {
     return {
       plugins: [
