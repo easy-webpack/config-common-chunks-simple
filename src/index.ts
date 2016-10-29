@@ -1,4 +1,4 @@
-import {WebpackConfig, get} from '@easy-webpack/core'
+import {WebpackConfigWithMetadata, get} from '@easy-webpack/core'
 import * as webpack from 'webpack'
 
 /**
@@ -10,7 +10,7 @@ import * as webpack from 'webpack'
  * See: https://github.com/webpack/docs/wiki/optimization#multi-page-app
  */
 export = function commonChunksSimple({appChunkName = '', firstChunk = ''} = {}) {
-  return function commonChunksSimple(this: WebpackConfig): WebpackConfig {
+  return function commonChunksSimple(this: WebpackConfigWithMetadata): WebpackConfigWithMetadata {
     return {
       plugins: [
         new webpack.optimize.CommonsChunkPlugin({
